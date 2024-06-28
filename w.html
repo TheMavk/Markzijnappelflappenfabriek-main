@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: #333;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav .logo img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav .content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        nav .links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav .links li {
+            position: relative;
+        }
+
+        nav .links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav .links a:hover {
+            background-color: #555;
+        }
+
+        nav input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Dropdown menu styling */
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            z-index: 1000;
+        }
+
+        nav ul ul li {
+            width: 200px;
+        }
+
+        nav ul ul ul {
+            top: 0;
+            left: 100%;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        /* Hamburger menu icon */
+        nav .menu-icon, nav .search-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        nav .menu-icon i, nav .search-icon i {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        /* Search box styling */
+        nav .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        nav .search-box input {
+            border: none;
+            padding: 10px;
+            flex-grow: 1;
+        }
+
+        nav .search-box button {
+            background-color: #333;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        nav .search-box button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            nav .menu-icon, nav .search-icon {
+                display: block;
+            }
+
+            nav .content {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav .links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav .links li {
+                width: 100%;
+            }
+
+            nav input:checked ~ .content {
+                display: flex;
+            }
+
+            nav ul ul {
+                position: static;
+            }
+
+            nav ul ul ul {
+                position: static;
+            }
+
+            nav ul li:hover > ul {
+                display: none;
+            }
+
+            nav input:checked + label + ul > ul {
+                display: block;
+            }
+
+            nav input[type="checkbox"]:checked + label + ul ul ul {
+                display: block;
+            }
+
+            nav .links label {
+                display: block;
+                color: #fff;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        }
+
+        @media (min-width: 769px) {
+            nav .links label {
+                display: none;
+            }
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px; /* Set your desired max height here */
+            object-fit: cover; /* Ensures the image covers the area */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 10px 0;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .full-width-image {
+                max-height: 300px; /* Adjust max height for smaller screens if needed */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="show-search">
+            <input type="checkbox" id="show-menu">
+            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <div class="content">
+                <div class="logo"><a href="app.html"><img src="img/Veglologo.png" alt="Logo van Veglo" width="200" height="60"></a></div>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="base.html" class="desktop-link">Over ons</a>
+                        <input type="checkbox" id="show-overons">
+                        <label for="show-overons">Over ons</label>
+                        <ul>
+                            <li><a href="#">Bestuur & Commissies</a></li>
+                            <li><a href="#">Locatie & Speeltijden</a></li>
+                            <li><a href="#">Sponsoring</a></li>
+                            <li><a href="#">VOG</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-link">Lidmaatschap</a>
+                        <input type="checkbox" id="show-lidmaatschap">
+                        <label for="show-lidmaatschap">Lidmaatschap</label>
+                        <ul>
+                            <li><a href="#">Lid worden</a></li>
+                            <li><a href="#">Opzeggen</a></li>
+                            <li><a href="#">Contributie</a></li>
+                            <li><a href="#">Kennismaken</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-link">Senioren</a>
+                        <input type="checkbox" id="show-senioren">
+                        <label for="show-senioren">Senioren</label>
+                        <ul>
+                            <li><a href="#">Competitie</a></li>
+                            <li><a href="#">Teams</a></li>
+                            <li><a href="#">Recreatief</a></li>
+                            <li><a href="#">Training</a></li>
+                            <li><a href="#">Vrij spelen</a></li>
+                            <li>
+                                <a href="#" class="desktop-link">More Items</a>
+                                <input type="checkbox" id="show-items">
+                                <label for="show-items">More Items</label>
+                                <ul>
+                                    <li><a href="#">Sub Menu 1</a></li>
+                                    <li><a href="#">Sub Menu 2</a></li>
+                                    <li><a href="#">Sub Menu 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="desktop-link">Jeugd</a>
+                        <input type="checkbox" id="show-jeugd">
+                        <label for="show-jeugd">Jeugd</label>
+                        <ul>
+                            <li><a href="#">Training</a></li>
+                            <li><a href="#">Jeugdbegeleiders</a></li>
+                            <li><a href="#">Jeugd competitie</a></li>
+                            <li><a href="#">Schoolsport</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vrijwilligers</a></li>
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="#" class="desktop-link">More</a>
+                        <input type="checkbox" id="show-more">
+                        <label for="show-more">More</label>
+                        <ul>
+                            <li><a href="#">Leids Open</a></li>
+                            <li><a href="#">Zomerbadminton</a></li>
+                            <li><a href="#">Nieuws</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+            <form action="#" class="search-box">
+                <input type="text" placeholder="Type Something to Search..." required>
+                <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
+        </nav>
+    </header>
+
+    <section>
+        <img src="img/veglobc.png" alt="Placeholder Image" class="full-width-image">
+    </section>
+
+    <section>
+        <h2>Section 2</h2>
+        <p>This is the content of section 2.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+https://codepen.io/mahmudulhrabby/pen/GGqdvr
+https://github.com/bedimcode/responsive-dropdown-menu-2/tree/main?tab=readme-ov-file

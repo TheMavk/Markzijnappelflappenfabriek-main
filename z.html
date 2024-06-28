@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Responsive dropdown menu - Bedimcode</title>
+</head>
+
+<body>
+   <!--=============== HEADER ===============-->
+   <header class="header">
+      <nav class="nav container">
+         <div class="nav__data">
+            <a href="#" class="nav__logo">
+               <img src="img/Veglologo.png" class="nav__logo-img">
+            </a>
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line nav__burger"></i>
+               <i class="ri-close-line nav__close"></i>
+            </div>
+         </div>
+
+         <!--=============== NAV MENU ===============-->
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li><a href="#" class="nav__link">Home</a></li>
+
+               <!--=============== DROPDOWN 1 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Over ons <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-team-line"></i> Bestuur & Commissies
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-map-pin-time-line"></i> Locatie & Speeltijden
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-service-line"></i> Sponsoring
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-booklet-line"></i> Statuten
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <!--=============== DROPDOWN 2 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Lidmaatschap <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-team-line"></i> Bestuur & Commissies
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-map-pin-time-line"></i> Locatie & Speeltijden
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-service-line"></i> Sponsoring
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-booklet-line"></i> Statuten
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <!--=============== DROPDOWN 3 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Senioren <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-pie-chart-line"></i> Overview
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-arrow-up-down-line"></i> Transactions
+                        </a>
+                     </li>
+
+                     <!--=============== DROPDOWN SUBMENU ===============-->
+                     <li class="dropdown__subitem">
+                        <div class="dropdown__link">
+                           <i class="ri-bar-chart-line"></i> Reports <i class="ri-add-line dropdown__add"></i>
+                        </div>
+
+                        <ul class="dropdown__submenu">
+                           <li>
+                              <a href="#" class="dropdown__sublink">
+                                 <i class="ri-file-list-line"></i> Documents
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="#" class="dropdown__sublink">
+                                 <i class="ri-cash-line"></i> Payments
+                              </a>
+                           </li>
+
+                           <li>
+                              <a href="#" class="dropdown__sublink">
+                                 <i class="ri-refund-2-line"></i> Refunds
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </li>
+
+               <!--=============== DROPDOWN 4 ===============-->
+               <li class="dropdown__item">
+                  <div class="nav__link">
+                     Jeugd <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                  </div>
+
+                  <ul class="dropdown__menu">
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-user-line"></i> Profiles
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-lock-line"></i> Accounts
+                        </a>
+                     </li>
+
+                     <li>
+                        <a href="#" class="dropdown__link">
+                           <i class="ri-message-3-line"></i> Messages
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li><a href="#" class="nav__link">Vrijwilligers</a></li>
+               <li><a href="#" class="nav__link">More</a></li>
+            </ul>
+         </div>
+      </nav>
+   </header>
+
+   <section>
+      <img src="img/image.png" class="responsive">
+   </section>
+
+   <section class="info">
+      <h1>Nieuws</h1>
+   </section>
+   <section class="cards-wrapper">
+      <div class="card2-grid-space">
+         <div class="num">01</div>
+         <a class="card2" href="#" style="background-image: url('img/bade.jpg');">
+            <div>
+               <h1>HTML Syntax</h1>
+               <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+               <div class="date">6 Oct 2017</div>
+               <div class="tags">
+                  <div class="tag">Lees meer<i class="ri-arrow-right-line"></i></div>
+               </div>
+            </div>
+         </a>
+      </div>
+      <div class="card2-grid-space">
+         <div class="num">02</div>
+         <a class="card2" href="#" style="background-image: url('img/image.png');">
+            <div>
+               <h1>Basic types of HTML tags</h1>
+               <p>Learn about some of the most common HTML tags…</p>
+               <div class="date">9 Oct 2017</div>
+               <div class="tags">
+                  <div class="tag">Lees meer<i class="ri-arrow-right-line"></i></div>
+               </div>
+            </div>
+         </a>
+      </div>
+      <div class="card2-grid-space">
+         <div class="num">03</div>
+         <a class="card2" href="#" style="background-image: url('img/bk.png');">
+            <div>
+               <h1>Links, images and about file paths</h1>
+               <p>Learn how to use links and images along with file paths…</p>
+               <div class="date">14 Oct 2017</div>
+               <div class="tags">
+                  <div class="tag">Lees meer<i class="ri-arrow-right-line"></i></div>
+               </div>
+            </div>
+         </a>
+      </div>
+   </section>
+
+   <section>
+      <div class="main">
+         <h1 class="spon">Veglo Verbindt</h1>
+         <ul class="cards">
+            <li class="cards_item">
+               <div class="card">
+                  <!-- Afbeeldingen moeten 500 bij 300 zijn. -->
+                  <div class="card_image"><img src="img/racc.jpg"></div>
+                  <div class="card_content">
+                     <h2 class="card_title">Kennismaken</h2>
+                     <p class="card_text">Een keertje kennismaken en mee spelen?</p>
+                     <button class="btn card_btn">Klik hier!</button>
+                  </div>
+               </div>
+            </li>
+            <li class="cards_item">
+               <div class="card">
+                  <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                  <div class="card_content">
+                     <h2 class="card_title">Sponsoren</h2>
+                     <p class="card_text">placeholder</p>
+                     <button class="btn card_btn">Read More</button>
+                  </div>
+               </div>
+            </li>
+            <li class="cards_item">
+               <div class="card">
+                  <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                  <div class="card_content">
+                     <h2 class="card_title">Vrijwilligerswerk</h2>
+                     <p class="card_text">placeholder</p>
+                     <button class="btn card_btn">Klik hier!</button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </section>
+
+<!--=============== FOOTER ===============-->
+   <footer class="footer">
+      <div class="footer-row">
+         <div class="footer-col">
+            <h4>placeholder</h4>
+            <ul class="links">
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+            </ul>
+         </div>
+         <div class="footer-col">
+            <h4>placeholder</h4>
+            <ul class="links">
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+            </ul>
+         </div>
+         <div class="footer-col">
+            <h4>placeholder</h4>
+            <ul class="links">
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+               <li><a href="#">placeholder</a></li>
+            </ul>
+         </div>
+         <div class="footer-col">
+            <h4>Socials</h4>
+            <div class="icons">
+               <i class="ri-facebook-circle-line"></i>
+               <i class="ri-twitter-line"></i>
+               <i class="ri-instagram-line"></i>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>
